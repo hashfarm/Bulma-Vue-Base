@@ -1,0 +1,47 @@
+$dark:hsl(206, 9%, 10%);
+$light: hsl(206, 9%, 18%);
+
+$message-body-color: #ffffff;
+$message-background-color: #2C2F33;
+
+$message-header-radius: 6px;
+$message-body-radius: 6px;
+
+$input-background-color: hsl(206, 9%, 18%);
+$input-hover-color: hsl(206, 9%, 23%);
+$input-border-color: hsl(206, 9%, 25%);
+$input-focus-border-color: hsl(206, 9%, 35%);
+$input-focus-box-shadow-color: hsl(206, 9%, 45%);
+
+$button-color: #ffffff;
+$button-hover-color: #ffffff;
+$button-focus-color: #ffffff;
+$button-active-color: #ffffff;
+$button-focus-box-shadow-color: hsla(206, 9%, 45%, 0.376);
+$button-active-border-color: hsl(206, 9%, 34%);
+$button-focus-border-color: hsl(206, 9%, 40%);
+$button-background-color :hsl(206, 9%, 18%);
+$button-border-color: hsl(206, 9%, 25%);
+
+@import "~bulma/bulma";
+@import '~bulma-slider';
+
+.message-body {
+  background-color: #23272A;
+}
+
+.message.is-dark {
+  background-color: #2C2F33;
+}
+
+div.slidertext {
+    height: 0.4em;
+    position: relative }
+div.slidertext p {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    margin-right: -40%;
+    transform: translate(-40%, -40%) 
+}

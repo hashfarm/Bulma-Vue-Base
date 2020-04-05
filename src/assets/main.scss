@@ -1,0 +1,16 @@
+$body-background-color: #2C2F33;
+$navbar-background-color: #23272A;
+$navbar-box-shadow-color: hsl(206, 9%, 15%);
+$navbar-item-hover-background-color: hsl(204, 7%, 13%);
+$navbar-item-hover-color: hsl(0, 0%, 98%);
+$navbar-item-color: hsl(0, 0%, 80%);
+
+$family-primary: roboto;
+
+@import "~bulma/bulma";
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
