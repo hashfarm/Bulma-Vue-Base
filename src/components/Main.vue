@@ -1,98 +1,36 @@
 <template>
   <div class="Main">
-    
-      <section class="section is-medium">
-        <div class="container">
+      <form style="padding-top: 1em; padding-left: 1em;">
+        <button class="button" type="button" id="TopButton1" v-on:click="component = 'MainP1-vue'">Page 1</button>
+        <div class="divider"/>
+        <button class="button"  type="button" id="TopButton2" v-on:click="component = 'MainP2-vue'">Page 2</button>
+      </form>
 
-          <!-- Main Columns -->
-          <div class="columns">
-
-            <div class="column is-three-fifths">
-              <!-- First Message -->
-              <article class="message is-dark">
-                <div class="message-header">
-                  <font size="4">Title</font>
-                </div>
-                
-                <div class="message-body">
-
-                  <div class="columns">
-                    <div class="column is-half">
-
-                     <!-- Text Input -->
-                    <input class="input" type="text" id="TestInput" placeholder="Test Input">
-
-                     <!-- Slider -->
-                    <form oninput="result.value=parseInt(sliderWithValue.value)" style="padding-top: 15px; padding-bottom: 10px;">
-                        <div class=slidertext><p>Test Slider</p></div>
-                        <input class="slider is-fullwidth has-output" step="1" min="1" max="100" value="50" type="range" id="sliderWithValue" name="sliderWithValue">
-                        <output name="result" for="sliderWithValue">50</output>
-                    </form>
-
-                    <!-- Button -->
-                    <button class="button" id="TestButton">Test Button</button>
-
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-
-             <!-- Second Message -->
-            <div class="column is-two-fifths">
-             <article class="message is-dark">
-                <div class="message-header">
-                  Message Title
-                </div>
-                
-                <div class="message-body">
-                  Message Body
-                </div>
-              </article>
-             </div>
-          </div>
-
-        </div>
-      </section>
+      <components v-bind:is="component"></components>
 
   </div>
 </template>
 
 <script>
 
-/* Example Function */
-const button1func = function () {
-  const $Input1Text = document.querySelector("#TestInput").value
-  const $SliderVal = document.querySelector("#sliderWithValue").value
-
-  var i;
-  for (i = 0; i < $SliderVal; i++) {
-      console.log($Input1Text)
-  }
-}
-
-/* Button On Click Stuff (Easiest way due to the way vuejs functions) */
-var addHandlers = function () {
-  const $Button1 = document.querySelector("#TestButton")
-
-  $Button1.addEventListener('click', () => {
-      button1func()
-   });
-}
-
+import MainP1 from "./subcomponents/Main/MainP1.vue"
+import MainP2 from "./subcomponents/Main/MainP2.vue"
 
 export default {
-  name: 'Main',
-  props: {
+  name: 'App',
+  components: {
+    'MainP1-vue': MainP1,
+    'MainP2-vue': MainP2
   },
-  mounted: function () {
-    addHandlers()
+  data() {
+    return {
+      component: 'MainP1-vue'
+    }
   }
 }
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
 @import '../assets/MainPanel.scss';

@@ -31,11 +31,11 @@ $button-border-color: hsl(206, 9%, 25%);
 }
 
 .message.is-dark {
-  background-color: #2C2F33;
+  background-color: transparent;
 }
 
 div.slidertext {
-    height: 0.4em;
+    height: 0.6em;
     position: relative }
 div.slidertext p {
     margin: 0;
@@ -44,4 +44,10 @@ div.slidertext p {
     left: 40%;
     margin-right: -40%;
     transform: translate(-40%, -40%) 
+}
+
+.divider{
+  width: 0.2em;
+  height:auto;
+  display:inline-block;
 }
