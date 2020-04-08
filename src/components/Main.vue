@@ -6,7 +6,9 @@
         <button class="button"  type="button" id="TopButton2" v-on:click="component = 'MainP2-vue'">Page 2</button>
       </form>
 
-      <components v-bind:is="component"></components>
+        <transition name="component-fade" mode="out-in">
+          <components v-bind:is="component"></components>
+       </transition>
 
   </div>
 </template>
@@ -33,6 +35,6 @@ export default {
 
 <style scoped lang="scss">
 
-@import '../assets/MainPanel.scss';
+  @import '../assets/MainPanel.scss';
 
 </style>

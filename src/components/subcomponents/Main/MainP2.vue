@@ -21,7 +21,8 @@
                      <!-- Text Input -->
                     <input class="input" type="text" id="TestInput" placeholder="Test Input">
 
-                     <!-- Slider -->
+                    <!-- Spacer -->
+                    <div class="vertdiv"/>
 
                     <!-- Button -->
                     <button class="button" id="TestButton">Test Button</button>

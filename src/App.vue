@@ -30,8 +30,9 @@
     </div>
   </nav>
    
-   <components v-bind:is="component"></components>
-
+   <transition name="component-fade" mode="out-in">
+       <components v-bind:is="component"></components>
+   </transition>
 
   </div>
 </template>
@@ -48,9 +49,14 @@ export default {
   },
   data() {
     return {
-      component: 'main-vue'
+      component: 'main-vue',
     }
-  }
+  },
+   methods: {
+     afterEnter: function () {
+     
+     }
+   }
   
 }
 
@@ -70,5 +76,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 </script>
-
 
