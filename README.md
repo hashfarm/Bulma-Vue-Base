@@ -1,4 +1,6 @@
 This is a Bulma/Vue base I made a while back, not much, but it has some nice scss doe.
+![Overview](https://i.imgur.com/uwblldx.gif)
+
 
 ## Project setup
 ```
